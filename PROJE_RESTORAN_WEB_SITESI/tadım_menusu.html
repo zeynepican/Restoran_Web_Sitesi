@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zeybus.css">
+    <title>ZEYBUS - Tadım Menüsü</title>
+</head>
+<body>
+
+    <header>
+        <h1>ZEYBUS </h1>
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="anasayfa.html">Ana Sayfa</a>
+            <a href="hikayemiz.html">Hikayemiz</a>
+            <a href="menü.html">Menü</a>
+            <a href="ekip.html">Ekip</a>
+            <a href="dunya_mutfagi.html">Dünya Mutfağı</a>
+            <a href="anadolu_kosesi.html">Anadolu Köşesi</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="rezervasyon.html">Rezervasyon</a>
+            <a href="gorus.html">Görüş ve Öneri</a>
+            <a href="tadım_menusu.html">Tadım Menüsü</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section>
+            <h2>Tadım Menüsü</h2>
+            <form id="tastingMenuForm">
+                <label for="mainCourse">Ana Yemek:</label>
+                <select id="mainCourse" name="mainCourse">
+                    <option value="Meksika Tacoları">Meksika Tacoları</option>
+                    <option value="İspanyol Paella">İspanyol Paella</option>
+                    <option value="Japon Ramen Çorbası"> Japon Ramen Çorbası</option>
+                    <option value="Butter Chicken">Butter Chicken</option>
+                    <option value="Risotto">Risotto</option>
+                    <option value="Hünkar Beğendi">Hünkar Beğendi</option>
+                    <option value="Kuzu Tandır">Kuzu Tandır</option>
+                     <option value="Kavun Dolması">Kavun Dolması</option>
+                      <option value="Yaprak Sarma">Yaprak Sarma</option>
+                       <option value="Mantı">Mantı</option>
+
+
+
+                </select>
+
+                <label for="cocktail">Kokteyl:</label>
+                <select id="cocktail" name="cocktail">
+                    <option value="Ankara Klasiği">Ankara Klasiği</option>
+                    <option value="Sultanın Serinliği">Sultanın Serinliği</option>
+                    <option value="Anadolu Melodisi<">Anadolu Melodisi</option>
+                    <option value="Zeybus Özel">Zeybus Özel</option>
+                    <option value="Buse'nin Zevk Bombası">Buse'nin Zevk Bombası</option>
+
+
+                </select>
+
+                <label for="dessert">Tatlı:</label>
+                <select id="dessert" name="dessert">
+                    <option value="Fransız Magnolia ">Fransız Magnolia </option>
+                    <option value="İtalyan Rüyası">İtalyan Rüyası</option>
+                    <option value="Japon Jelibonları">Japon Jelibonları</option>
+                     <option value="Türk Kahvesi Keyfi">Türk Kahvesi Keyfi</option>
+                      <option value="Hint Bahar">Hint Bahar</option>
+                </select>
+
+                <button type="button" onclick="submitTastingMenu()">Gönder</button>
+            </form>
+
+         
+
+            <div id="selectedMenu">
+                <h3>Seçilen Menü:</h3>
+                <p id="selectedMainCourse"></p>
+                <p id="selectedCocktail"></p>
+                <p id="selectedDessert"></p>
+                <p id="totalPrice"></p> <!-- Toplam fiyat gösterilecek yer -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Yemekler ve fiyatları
+        var menuPrices = {
+            "Meksika Tacoları": 300,
+            "İspanyol Paella": 500,
+            "Japon Ramen Çorbası": 250,
+            "Hint Bahar": 180,
+            "İtalyan Rüyası": 130,
+            "Hünkar Beğendi": 450,
+            "Kuzu Tandır": 500,
+            "Kavun Dolması": 350,
+            "Yaprak Sarma": 200,
+            "Mantı": 250,
+            "Ankara Klasiği": 200,
+            "Sultanın Serinliği": 280,
+            "Anadolu Melodisi": 250,
+            "Zeybus Özel": 280,
+            "Buse'nin Zevk Bombası": 250,
+            "Fransız Magnolia ": 200,
+            "İtalyan Rüyası": 180,
+            "Japon Jelibonları": 140,
+            "Türk Kahvesi Keyfi": 150,
+            "Hint Bahar": 150
+        };
+
+        function submitTastingMenu() {
+            var mainCourse = document.getElementById("mainCourse").value;
+            var cocktail = document.getElementById("cocktail").value;
+            var dessert = document.getElementById("dessert").value;
+
+            document.getElementById("selectedMainCourse").innerHTML = "Ana Yemek: " + mainCourse;
+            document.getElementById("selectedCocktail").innerHTML = "Kokteyl: " + cocktail;
+            document.getElementById("selectedDessert").innerHTML = "Tatlı: " + dessert;
+
+            var totalPrice = calculateTotalPrice(mainCourse, cocktail, dessert);
+            document.getElementById("totalPrice").innerHTML = "Toplam Fiyat: " + totalPrice.toFixed(2) + " TL";
+        }
+
+        function calculateTotalPrice(mainCourse, cocktail, dessert) {
+            var mainCoursePrice = menuPrices[mainCourse] || 0;
+            var cocktailPrice = menuPrices[cocktail] || 0;
+            var dessertPrice = menuPrices[dessert] || 0;
+
+            return mainCoursePrice + cocktailPrice + dessertPrice;
+        }
+    </script>
+
+<footer>
+        <p>&copy; 2024 ZEYBUS Restoranı | Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
+
+

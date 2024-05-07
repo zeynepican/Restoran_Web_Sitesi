@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zeybus.css">
+    <title>ZEYBUS - Menü</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Form elemanları arasındaki boşluğu ayarlar */
+            max-width: 300px; /* Formun genişliğini ayarlar */
+            margin: auto; /* Formu ortalar */
+        }
+
+        form label,
+        form select,
+        form input,
+        form button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+ <header>
+        <h1>ZEYBUS </h1>
+    </header>
+
+   <nav>
+        <div class="nav-links">
+            <a href="anasayfa.html"> Ana Sayfa </a>
+            <a href="hikayemiz.html">  Hikayemiz</a>
+            <a href="menü.html">Menü</a>
+            <a href="ekip.html">Ekip</a>
+            <a href="dunya_mutfagi.html">Dünya Mutfağı</a>
+            <a href="anadolu_kosesi.html">Anadolu Köşesi</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="rezervasyon.html">Rezervasyon</a>
+            <a href="gorus.html"> Görüş ve Önerileriniz</a>
+             <a href="tadım_menusu.html"> Tadım Menüsü</a>
+        </div>
+    </nav>
+
+
+    <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zeybus.css">
+    
+   
+    <div class="main-content">
+        <section>
+            <h2>Rezervasyon</h2>
+            <p>Restoranımıza rezervasyon yapmak için aşağıdaki formu doldurun.</p>
+
+            <form action="#" method="post">
+                <label for="restoran">Şube Seçimi:</label>
+                <select id="restoran" name="restoran" required>
+                    <option value="zeybus">İstanbul</option>
+                    <option value="zeybus">Ankara</option>
+                    <option value="zeybus">İzmir</option>
+                    <option value="zeybus">Bursa</option>
+                    <!-- Diğer restoranları ekleyebilirsiniz -->
+                </select>
+
+                <label for="saat">Saat:</label>
+                <input type="time" id="saat" name="saat" required>
+
+                <label for="kisi_sayisi">Kaç Kişi:</label>
+                <input type="number" id="kisi_sayisi" name="kisi_sayisi" min="1" required>
+
+                 <label for="rezervasyon_tarihleri">Rezervasyon Tarihleri:</label>
+                <input type="date" id="rezervasyon_tarihleri" name="rezervasyon_tarihleri" required>
+
+
+                <button type="submit">Rezervasyon Yap</button>
+            </form>
+        </section>
+    </div>
+
+    
+
+      <footer>
+        <p>&copy; 2024 ZEYBUS Restoranı | Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>

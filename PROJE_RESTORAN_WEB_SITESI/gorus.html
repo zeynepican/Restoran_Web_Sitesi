@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zeybus.css">
+    <title>ZEYBUS - Menü</title>
+</head>
+ <header>
+        <h1>ZEYBUS </h1>
+    </header>
+
+   <nav>
+        <div class="nav-links">
+            <a href="anasayfa.html"> Ana Sayfa </a>
+            <a href="hikayemiz.html">  Hikayemiz</a>
+            <a href="menü.html">Menü</a>
+            <a href="ekip.html">Ekip</a>
+            <a href="dunya_mutfagi.html">Dünya Mutfağı</a>
+            <a href="anadolu_kosesi.html">Anadolu Köşesi</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="rezervasyon.html">Rezervasyon</a>
+            <a href="gorus.html"> Görüş ve Önerileriniz</a>
+             <a href="tadım_menusu.html"> Tadım Menüsü</a>
+        </div>
+    </nav>
+    <div class="main-content">
+        <section>
+            <h2>Görüş ve Öneri</h2>
+            <p>Restoranımız hakkındaki görüşlerinizi ve önerilerinizi bizimle paylaşın.</p>
+
+            <form action="#" method="post">
+                <label for="tarih"><b>Geliş Tarihi:</b></label>
+                <input type="date" id="tarih" name="tarih" required>
+
+               <label for="garson"><b>Aldığınız Hizmet:</b></label>
+                <select id="hizmet" name="hizmet" required>
+                    <option value="Kokteyl">Kokteyl</option>
+                    <option value="Tatlı">Tatlı</option>
+                    <option value="Ana Yemek">Ana Yemek</option></select>
+
+                <label for="garson"><b>Hizmet Veren Garson:</b></label>
+                <select id="garson" name="garson" required>
+                    <option value="Mehmet">Mehmet</option>
+                    <option value="Can">Can</option>
+                   
+                </select>
+
+                <p><label><b> Bizimle görüş ve önerilerinizi paylaşabilirsiniz :) </b><br>
+                    <textarea name="gorus" rows="10" cols="40"></textarea>
+                </label>
+            </p>
+               
+                <button type="submit"><b>Gönder</b></button>
+            </form>
+        </section>
+    </div>
+
+
+      <footer>
+        <p>&copy; 2024 ZEYBUS Restoranı | Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
